@@ -103,6 +103,22 @@
                                     @endif
                                 </div>
                                 <div class="form-group mb-3">
+                                    <input type="text" placeholder="Sdt" id="sdt" class="form-control" name="sdt"
+                                           value="{{ $user->sdt }}"
+                                           required autofocus>
+                                    @if ($errors->has('sdt'))
+                                        <span class="text-danger">{{ $errors->first('sdt') }}</span>
+                                    @endif
+                                </div>
+                                <div class="form-group mb-3">
+                                    <input type="text" placeholder="Address" id="address" class="form-control" name="address"
+                                           value="{{ $user->address }}"
+                                           required autofocus>
+                                    @if ($errors->has('address'))
+                                        <span class="text-danger">{{ $errors->first('address') }}</span>
+                                    @endif
+                                </div>
+                                <div class="form-group mb-3">
                                     <input type="text" placeholder="Email" id="email_address" class="form-control"
                                            value="{{ $user->email }}"
                                            name="email" required autofocus>
